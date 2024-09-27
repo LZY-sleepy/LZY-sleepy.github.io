@@ -1,9 +1,13 @@
 ---
 layout: archive
-title: "CV"
+title: "一些有用的网站"
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
-等待填写
+## 学习
+
+
+
+## 有趣
