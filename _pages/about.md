@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ----------------------
+
 ### <font color="red">&nbsp;&nbsp;&nbsp;&nbsp;这是一位帅哥
 ### <font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;他的帅气毋庸置疑
 -----
@@ -20,7 +21,7 @@ redirect_from:
 
 ---------------------------------------
 <p align="center">
-  <img src="eva_2" alt="明日香" />
+  <img src="/images/eva_2.png" alt="明日香" />
 </p>
 
 ## 在哪能找到他？
