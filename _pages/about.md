@@ -5,7 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
-----------------------
+---
 
 ### <font color="red">&nbsp;&nbsp;&nbsp;&nbsp;这是一位帅哥
 ### <font color="blue">&nbsp;&nbsp;&nbsp;&nbsp;他的帅气毋庸置疑
