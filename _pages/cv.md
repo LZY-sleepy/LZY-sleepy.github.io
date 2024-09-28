@@ -22,6 +22,8 @@ RL代码[链接](https://github.com/XinJingHao/DRL-Pytorch)
 ## ML
 ML实战[链接](https://github.com/apachecn/ailearning?tab=readme-ov-file)
 
+人工智能学习[链接](https://face2ai.com/)
+
 ## fun
 
 核弹游戏[链接](https://nuclearsecrecy.com/nukemap/)
