@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>cs_al_1 | LZY&#39;s blog</title>
+    <meta name="author" content="LZY" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/xiaoxieshen.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading1.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>LZY&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;LZY&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>cs_al_1</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/3/17
+        </span>
+        
+        <span class="category">
+            <a href="/categories/cs-algorithm/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                cs - algorithm
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/cs/" style="color: #00a596">
+                    cs
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/algorithm/" style="color: #00bcd4">
+                    algorithm
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="&#x72B6;&#x6001;&#x538B;&#x7F29;-state-compression">&#x72B6;&#x6001;&#x538B;&#x7F29; (State Compression)</h1>
+<h2 id="&#x5F15;&#x8A00;">1. &#x5F15;&#x8A00;</h2>
+<p>&#x200B;
+&#x72B6;&#x6001;&#x538B;&#x7F29;&#x662F;&#x4E00;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x4F18;&#x5316;&#x6280;&#x672F;&#xFF0C;&#x901A;&#x5E38;&#x5E94;&#x7528;&#x4E8E;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF08;DP&#xFF09;&#x95EE;&#x9898;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x6C42;&#x89E3;&#x56FE;&#x8BBA;&#x95EE;&#x9898;&#x548C;&#x4F18;&#x5316;&#x95EE;&#x9898;&#x65F6;&#x3002;&#x901A;&#x8FC7;&#x5C06;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x538B;&#x7F29;&#x5230;&#x8F83;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x72B6;&#x6001;&#x538B;&#x7F29;&#x80FD;&#x591F;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x5E76;&#x63D0;&#x9AD8;&#x7B97;&#x6CD5;&#x6548;&#x7387;&#x3002;&#x5728;&#x5F88;&#x591A;&#x95EE;&#x9898;&#x4E2D;&#xFF0C;&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6216;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#x6570;&#x7EC4;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x5E76;&#x52A0;&#x901F;&#x4E86;&#x72B6;&#x6001;&#x7684;&#x66F4;&#x65B0;&#x548C;&#x641C;&#x7D22;&#x3002;</p>
+<h2 id="&#x72B6;&#x6001;&#x538B;&#x7F29;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;">2. &#x72B6;&#x6001;&#x538B;&#x7F29;&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;</h2>
+<p>&#x200B;
+&#x72B6;&#x6001;&#x538B;&#x7F29;&#x662F;&#x901A;&#x8FC7;&#x5C06;&#x591A;&#x4E2A;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x7F16;&#x7801;&#x6210;&#x4E00;&#x4E2A;&#x66F4;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x6574;&#x6570;&#xFF09;&#xFF0C;&#x6765;&#x8282;&#x7701;&#x7A7A;&#x95F4;&#x7684;&#x6280;&#x672F;&#x3002;&#x5728;&#x56FE;&#x8BBA;&#x3001;&#x8DEF;&#x5F84;&#x641C;&#x7D22;&#x4EE5;&#x53CA;&#x4F18;&#x5316;&#x95EE;&#x9898;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x5927;&#x91CF;&#x7684;&#x72B6;&#x6001;&#x3002;&#x901A;&#x8FC7;&#x4F4D;&#x8FD0;&#x7B97;&#xFF08;&#x5C24;&#x5176;&#x662F;&#x4F4D;&#x63A9;&#x7801;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x72B6;&#x6001;&#x538B;&#x7F29;&#x6210;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#xFF0C;&#x4ECE;&#x800C;&#x9AD8;&#x6548;&#x5730;&#x5B58;&#x50A8;&#x548C;&#x64CD;&#x4F5C;&#x3002;</p>
+<h3 id="&#x4F4D;&#x63A9;&#x7801;bit-masking">2.1. &#x4F4D;&#x63A9;&#x7801;&#xFF08;Bit Masking&#xFF09;</h3>
+<p>&#x200B;
+&#x4F4D;&#x63A9;&#x7801;&#x662F;&#x4E00;&#x79CD;&#x901A;&#x8FC7;&#x4F4D;&#x64CD;&#x4F5C;&#x6765;&#x8868;&#x793A;&#x72B6;&#x6001;&#x7684;&#x6280;&#x5DE7;&#x3002;&#x6BCF;&#x4E2A;&#x72B6;&#x6001;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x4F4D;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x4F4D;&#x6765;&#x8868;&#x793A;&#x67D0;&#x4E2A;&#x72B6;&#x6001;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E00;&#x4E2A;&#x56FE;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8BBF;&#x95EE;&#x60C5;&#x51B5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x5176;&#x4E2D;
+<code>1</code> &#x8868;&#x793A;&#x5DF2;&#x8BBF;&#x95EE;&#xFF0C;<code>0</code> &#x8868;&#x793A;&#x672A;&#x8BBF;&#x95EE;&#x3002;</p>
+<p>&#x200B; &#x5BF9;&#x4E8E; <code>n</code> &#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A; <code>2^n</code>
+&#x7684;&#x6574;&#x6570;&#x6765;&#x8868;&#x793A;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x7684;&#x8BBF;&#x95EE;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5C24;&#x5176;&#x9002;&#x7528;&#x4E8E;
+<strong>&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;&#xFF08;TSP&#xFF09;</strong> &#x548C;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x72B6;&#x6001;&#x538B;&#x7F29;&#x7684;&#x5E94;&#x7528;">3. &#x72B6;&#x6001;&#x538B;&#x7F29;&#x7684;&#x5E94;&#x7528;</h2>
+<h3 id="&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;tsp">3.1. &#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;&#xFF08;TSP&#xFF09;</h3>
+<p>&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;&#x662F;&#x4E00;&#x4E2A;&#x7ECF;&#x5178;&#x7684;&#x6700;&#x4F18;&#x5316;&#x95EE;&#x9898;&#xFF0C;&#x8981;&#x6C42;&#x4E00;&#x4E2A;&#x65C5;&#x884C;&#x5546;&#x4ECE;&#x591A;&#x4E2A;&#x57CE;&#x5E02;&#x51FA;&#x53D1;&#xFF0C;&#x8BBF;&#x95EE;&#x6BCF;&#x4E2A;&#x57CE;&#x5E02;&#x4E00;&#x6B21;&#x5E76;&#x4E14;&#x4EC5;&#x8BBF;&#x95EE;&#x4E00;&#x6B21;&#xFF0C;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x5230;&#x8D77;&#x70B9;&#x3002;&#x5728;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x72B6;&#x6001;&#x538B;&#x7F29;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x964D;&#x4F4E;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x5E76;&#x63D0;&#x9AD8;&#x8BA1;&#x7B97;&#x6548;&#x7387;&#x3002;</p>
+<h3 id="&#x52A8;&#x6001;&#x89C4;&#x5212;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x538B;&#x7F29;">3.2. &#x52A8;&#x6001;&#x89C4;&#x5212;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#x538B;&#x7F29;</h3>
+<p>&#x5728;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x4E2D;&#xFF0C;&#x901A;&#x5E38;&#x6709;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5F53;&#x6D89;&#x53CA;&#x5230;&#x591A;&#x4E2A;&#x5B50;&#x95EE;&#x9898;&#x65F6;&#x3002;&#x72B6;&#x6001;&#x538B;&#x7F29;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x4F4D;&#x63A9;&#x7801;&#x6765;&#x8868;&#x793A;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x80FD;&#x591F;&#x663E;&#x8457;&#x51CF;&#x5C11;&#x5185;&#x5B58;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;
+<code>n</code>
+&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x8868;&#x793A;&#x8BBF;&#x95EE;&#x72B6;&#x6001;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7684;&#x6BCF;&#x4E00;&#x4F4D;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x8BBF;&#x95EE;&#x60C5;&#x51B5;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x901A;&#x8FC7;&#x4F4D;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x5730;&#x8DDF;&#x8E2A;&#x54EA;&#x4E9B;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x3002;</p>
+<h4 id="&#x793A;&#x4F8B;&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;tsp&#x7684;&#x52A8;&#x6001;&#x89C4;&#x5212;">3.2.1.
+&#x793A;&#x4F8B;&#xFF1A;&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;&#xFF08;TSP&#xFF09;&#x7684;&#x52A8;&#x6001;&#x89C4;&#x5212;</h4>
+<p>&#x5BF9;&#x4E8E;&#x65C5;&#x884C;&#x5546;&#x95EE;&#x9898;&#x7684;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49; <code>dp[mask][i]</code>
+&#x6765;&#x8868;&#x793A;&#x4ECE;&#x8D77;&#x59CB;&#x8282;&#x70B9;&#x51FA;&#x53D1;&#xFF0C;&#x8BBF;&#x95EE;&#x4E86; <code>mask</code>
+&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x6700;&#x540E;&#x505C;&#x7559;&#x5728;&#x8282;&#x70B9; <code>i</code> &#x65F6;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x957F;&#x5EA6;&#x3002;</p>
+<ul>
+<li><code>mask</code> &#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x5DF2;&#x8BBF;&#x95EE;&#x8282;&#x70B9;&#x7684;&#x96C6;&#x5408;&#x3002;</li>
+<li><code>i</code> &#x662F;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x3002;</li>
+</ul>
+<p>&#x4F7F;&#x7528;&#x72B6;&#x6001;&#x538B;&#x7F29;&#x540E;&#xFF0C;<code>dp</code> &#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#x4E3A;
+<code>2^n * n</code>&#xFF0C;&#x5176;&#x4E2D; <code>n</code> &#x662F;&#x8282;&#x70B9;&#x7684;&#x6570;&#x91CF;&#x3002;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;
+<code>dp</code> &#x503C;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x901A;&#x8FC7;&#x4F4D;&#x8FD0;&#x7B97;&#x66F4;&#x65B0;&#x8BBF;&#x95EE;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code>
+int n = 4; // 4&#x4E2A;&#x8282;&#x70B9;
+vector&lt;vector&lt;int&gt;&gt; dp(1 &lt;&lt; n, vector&lt;int&gt;(n, INT_MAX));
+dp[1][0] = 0; // &#x4ECE;&#x8282;&#x70B9;0&#x51FA;&#x53D1;&#xFF0C;&#x521D;&#x59CB;&#x72B6;&#x6001;
+
+for (int mask = 0; mask &lt; (1 &lt;&lt; n); ++mask) {
+    for (int u = 0; u &lt; n; ++u) {
+        if (mask &amp; (1 &lt;&lt; u)) { // &#x5982;&#x679C;u&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x8FC7;
+            for (int v = 0; v &lt; n; ++v) {
+                if (!(mask &amp; (1 &lt;&lt; v))) { // &#x5982;&#x679C;v&#x8282;&#x70B9;&#x672A;&#x8BBF;&#x95EE;
+                    dp[mask | (1 &lt;&lt; v)][v] = min(dp[mask | (1 &lt;&lt; v)][v], dp[mask][u] + dist[u][v]);
+                }
+            }
+        }
+    }
+}</code></pre>
+<h4 id="&#x793A;&#x4F8B;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x95EE;&#x9898;">3.2.2
+&#x793A;&#x4F8B;&#xFF1A;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x95EE;&#x9898;</h4>
+<p>&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x7531; <code>n</code> &#x4E2A;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x7684;&#x65E0;&#x5411;&#x8FDE;&#x901A;&#x56FE;&#xFF0C;&#x56FE;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6309;&#x4ECE; 0 &#x5230;
+n - 1 &#x7F16;&#x53F7;&#x3002;&#x7ED9;&#x4F60;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; <code>graph</code>
+&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x56FE;&#x3002;&#x5176;&#x4E2D;&#xFF0C;<code>graph[i]</code> &#x662F;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x7531;&#x6240;&#x6709;&#x4E0E;&#x8282;&#x70B9;
+<code>i</code>&#x76F4;&#x63A5;&#x76F8;&#x8FDE;&#x7684;&#x8282;&#x70B9;&#x7EC4;&#x6210;&#x3002;&#x8FD4;&#x56DE;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4E00;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#x548C;&#x505C;&#x6B62;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x91CD;&#x8BBF;&#x8282;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x8FB9;&#x3002;</p>
+<pre><code>
+class Solution {
+public:
+    int shortestPathLength(vector&lt;vector&lt;int&gt;&gt;&amp; graph) {
+        int n=graph.size();
+        queue&lt;tuple&lt;int,int,int&gt;&gt; q;
+        vector&lt;vector&lt;int&gt;&gt; assist(n,vector&lt;int&gt;(1&lt;&lt;n));
+        for(int i=0;i&lt;n;i++){
+            q.emplace(i,1&lt;&lt;i,0);
+            assist[i][1&lt;&lt;i]=true;
+        }
+        int ans=0;
+        while(!q.empty()){
+            auto [u,mask,dist]=q.front();
+            q.pop();
+            if(mask==(1&lt;&lt;n)-1){
+                ans=dist;
+                break;
+            }
+            for(int v:graph[u]){
+                int mask_new=mask | (1&lt;&lt;v);
+                if(!assist[v][mask_new]){
+                    q.emplace(v,mask_new,dist+1);
+                    assist[v][mask_new]=true;
+                }
+            }
+        }
+        return ans;
+    }
+};</code></pre>
+<h3 id="&#x4F4D;&#x64CD;&#x4F5C;">3.3. &#x4F4D;&#x64CD;&#x4F5C;</h3>
+<p>&#x4F4D;&#x64CD;&#x4F5C;&#xFF08;&#x4F8B;&#x5982;&#x6309;&#x4F4D;&#x4E0E; <code>&amp;</code>&#xFF0C;&#x6309;&#x4F4D;&#x6216;
+<code>|</code>&#xFF0C;&#x6309;&#x4F4D;&#x5F02;&#x6216;
+<code>^</code>&#xFF09;&#x5E38;&#x5E38;&#x7528;&#x6765;&#x4FEE;&#x6539;&#x6216;&#x68C0;&#x67E5;&#x4E8C;&#x8FDB;&#x5236;&#x63A9;&#x7801;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x4F4D;&#x3002;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x901A;&#x5E38;&#x6BD4;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#xFF08;&#x5982;&#x6570;&#x7EC4;&#x7D22;&#x5F15;&#xFF09;&#x66F4;&#x9AD8;&#x6548;&#x3002;</p>
+<h4 id="&#x6309;&#x4F4D;&#x4E0E;&#x64CD;&#x4F5C;">3.3.1. &#x6309;&#x4F4D;&#x4E0E;&#x64CD;&#x4F5C; (<code>&amp;</code>)</h4>
+<p>&#x200B; &#x7528;&#x6765;&#x68C0;&#x67E5;&#x67D0;&#x4E00;&#x4F4D;&#x662F;&#x5426;&#x4E3A; <code>1</code>&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x4F4D;&#x662F;
+<code>1</code>&#xFF0C;&#x5219;&#x7ED3;&#x679C;&#x4E3A; <code>1</code>&#xFF0C;&#x5426;&#x5219;&#x4E3A; <code>0</code>&#x3002;</p>
+<h4 id="&#x6309;&#x4F4D;&#x6216;&#x64CD;&#x4F5C;">3.3.2. &#x6309;&#x4F4D;&#x6216;&#x64CD;&#x4F5C; (<code>|</code>)</h4>
+<p>&#x200B; &#x7528;&#x6765;&#x5C06;&#x67D0;&#x4E00;&#x4F4D;&#x8BBE;&#x7F6E;&#x4E3A; <code>1</code>&#xFF0C;&#x5373;&#x4F7F;&#x5176;&#x4ED6;&#x4F4D;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#x3002;</p>
+<h4 id="&#x6309;&#x4F4D;&#x5F02;&#x6216;&#x64CD;&#x4F5C;">3.3.3. &#x6309;&#x4F4D;&#x5F02;&#x6216;&#x64CD;&#x4F5C; (<code>^</code>)</h4>
+<p>&#x200B; &#x7528;&#x6765;&#x5207;&#x6362;&#x67D0;&#x4E00;&#x4F4D;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x4F4D;&#x662F; <code>1</code>&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x53D8;&#x4E3A;
+<code>0</code>&#xFF0C;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#x3002;</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 LZY&#39;s blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;LZY
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="LZY-sleepy/LZY-sleepy.github.io"
+    data-repo-id="R_kgDOOIHHNA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOOIHHNM4CoEfR"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light_protanopia"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+<canvas
+    id="fireworks"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"
+></canvas>
+<script src="https://s4.zstatic.net/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="/js/fireworks.min.js"></script>
+<canvas
+    id="background"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: -1"
+></canvas>
+<script src="/js/background.min.js"></script>
+</html>
